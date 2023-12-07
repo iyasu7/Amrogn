@@ -983,13 +983,13 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   color: #222831;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 100%;
-  background-color: #ffffff;
   border-radius: 100%;
   margin: 0 2.5px;
   font-size: 18px;
+  margin-right: 12px;
 }
 
 .footer_section .footer_social a:hover {

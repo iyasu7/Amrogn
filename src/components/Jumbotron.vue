@@ -92,23 +92,23 @@ export default {
             "A stunning view of a beach with golden sands and clear blue water.",
         },
         {
-          link: "https://source.unsplash.com/1600x900/?cat",
+          link: "src/assets/Ads-Grilled-Chicken.jpg",
           title: "Adorable Cat",
           description: "An adorable cat with fluffy fur and captivating eyes.",
         },
         {
-          link: "https://source.unsplash.com/1600x900/?dog",
+          link: "src/assets/Ads-Grilled-Chicken.jpg",
           title: "Playful Dog",
           description: "A playful dog enjoying a sunny day outdoors.",
         },
         {
-          link: "https://source.unsplash.com/1600x900/?lego",
+          link: "src/assets/Ads-Mofo.jpg",
           title: "Colorful Lego",
           description:
             "A creative display of colorful Lego bricks and constructions.",
         },
         {
-          link: "https://source.unsplash.com/1600x900/?textures&patterns",
+          link: "src/assets/Ads-Roasted.jpg",
           title: "Textures & Patterns",
           description:
             "An artistic composition showcasing various textures and patterns.",

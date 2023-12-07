@@ -1,5 +1,5 @@
 <script setup>
-import MenuItem from "../Menu/MenuItem.vue";
+import MenuItem from "../menu/MenuItem.vue";
 
 const menuItems = [
   {
@@ -12,7 +12,7 @@ const menuItems = [
     category: "burger",
     name: "Delicious Burger",
     price: "$15",
-    image: "src/assets/Ads-Fried-Chicken-removebg-ratio.png",
+    image: "src/assets/Ads-Fried-Chicken-removebg-menu.png",
   },
   {
     category: "pizza",
@@ -69,8 +69,7 @@ const menuItems = [
 
       <div class="filters-content mx-12">
         <div class="row grid ">
-          <!-- Replace the data with your actual data -->
-          <div class="ml-12 grid grid-cols-3 gap-4 grid-flow-row">
+          <div class="ml-12 sm:ml-2 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3  gap-4 grid-flow-row">
             <MenuItem
             class="m-2"
               v-for="(item, index) in menuItems"
