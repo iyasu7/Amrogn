@@ -1,6 +1,6 @@
 <template>
     <Disclosure as="nav" v-slot="{ open }">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <!-- Mobile menu button-->
@@ -12,8 +12,8 @@
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center bg-gray-800 p-4">
-              <img class="h-12 w-auto" :src="logo" alt="Amrogn" />
+            <div class="flex flex-shrink-0 items-center">
+              <img class="h-20 mt-8 w-auto" :src="logo" alt="Amrogn" />
             </div>
             
           </div>
