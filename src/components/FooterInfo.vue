@@ -1,13 +1,15 @@
 <template>
-  <footer class="footer_section bg-gray-800 text-white">
+  <footer
+  id="contact" class="footer_section bg-gray-800 text-white">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div class="footer-col">
-          <div class="footer_contact ml-12">
+          <div class="footer_contact">
             <h4 class="text-xl font-semibold">Contact Us</h4>
-            <div class="contact_link_box mt-4">
-              <a href="#location" class="flex items-center">
+            <div class="contact_link_box mt-4 mx-24 sm:mx-6">
+              <a href="#location" class="flex items-center justify-center">
                 <svg
+                style="text-align: center;"
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
                   height="36"
@@ -18,9 +20,9 @@
                     d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"
                   />
                 </svg>
-                <span> Locations </span>
+                <p> Locations </p>
               </a>
-              <a href="#" class="flex items-center mt-2">
+              <a href="#" class="flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
@@ -35,9 +37,9 @@
                     d="M19.506 7.96A16.027 16.027 0 0 1 7.96 19.506C5.819 20.051 4 18.21 4 16v-1c0-.552.449-.995.998-1.05a9.94 9.94 0 0 0 2.656-.639l1.52 1.52a12.049 12.049 0 0 0 5.657-5.657l-1.52-1.52a9.94 9.94 0 0 0 .64-2.656C14.005 4.448 14.448 4 15 4h1c2.21 0 4.051 1.819 3.506 3.96Z"
                   />
                 </svg>
-                <span> Call 09 03 464646 </span>
+                <p> Call 09 03 464646 </p>
               </a>
-              <a href="#" class="flex items-center mt-2">
+              <a href="#" class="flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -49,7 +51,7 @@
                     d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6m-2 0l-8 5l-8-5h16m0 12H4V8l8 5l8-5v10Z"
                   />
                 </svg>
-                <span class="ml-2"> info@amrognchicken.com </span>
+                <p class="ml-2"> info@amrognchicken.com </p>
               </a>
             </div>
           </div>
@@ -172,7 +174,8 @@
             </div>
           </div>
         </div>
-        <div class="footer-col">
+        <div class="footer-col ml-18"
+        style="text-align: center; margin-right: 0px;">
           <h4 class="text-xl font-semibold">Opening Hours</h4>
           <p class="mt-4">Everyday</p>
           <p>10.00 AM - 10.00 PM</p>
@@ -180,9 +183,9 @@
       </div>
       <div class="footer-info mt-8">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By By Iyasu
+          &copy; <span id="displayYear"></span> All Rights Reserved By Iyasu
           Yonas<br /><br />
-          &copy; <span id="displayYear"></span> Disigned & Developed by By <a href="https://www.linkedin.com/in/iyasuyonas" >@Josh</a>
+          &copy; <span id="displayYear"></span> Designed & Developed By <a href="https://www.linkedin.com/in/iyasuyonas" >@Josh</a>
         </p>
       </div>
     </div>
@@ -190,7 +193,6 @@
 </template>
 
 <script setup>
-import { Icon } from "@iconify/vue";
 </script>
 
 <style scoped>
