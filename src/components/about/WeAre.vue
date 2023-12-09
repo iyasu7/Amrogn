@@ -1,5 +1,6 @@
 <template>
-    <section class="about_section layout_padding">
+    <section
+    id="services" class="about_section layout_padding">
       <div class="container">
   
         <div class="grid md:grid-cols-2 gap-6">
@@ -8,7 +9,7 @@
               <img src="../../assets/Ads-Fried-Chicken-removebg-ratio.png" alt="Amerogn">
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 sm:mx-8 mx-4">
             <div class="detail-box">
               <div class="heading_container">
                 <h2 class="text-3xl font-bold">

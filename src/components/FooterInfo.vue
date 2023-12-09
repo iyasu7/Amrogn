@@ -1,5 +1,6 @@
 <template>
-  <footer class="footer_section bg-gray-800 text-white">
+  <footer
+  id="contact" class="footer_section bg-gray-800 text-white">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div class="footer-col">
@@ -180,9 +181,9 @@
       </div>
       <div class="footer-info mt-8">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By By Iyasu
+          &copy; <span id="displayYear"></span> All Rights Reserved By Iyasu
           Yonas<br /><br />
-          &copy; <span id="displayYear"></span> Disigned & Developed by By <a href="https://www.linkedin.com/in/iyasuyonas" >@Josh</a>
+          &copy; <span id="displayYear"></span> Designed & Developed By <a href="https://www.linkedin.com/in/iyasuyonas" >@Josh</a>
         </p>
       </div>
     </div>
