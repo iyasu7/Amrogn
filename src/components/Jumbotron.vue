@@ -2,8 +2,8 @@
   <article
     id="hero-screen"
     style="
-      background-color: #3f3d36;
-      background-position: right -600px bottom 10px;
+      background-color: #240101;
+      background-position: right 600px bottom 10px;
     "
     class="relative w-full left-1/2 transform -translate-x-1/2 flex flex-shrink-0 overflow-hidden shadow-2xl"
   >
@@ -26,10 +26,10 @@
         <img
           :src="item.link"
           :alt="item.title"
-          class="absolute inset-0 z-10 w-full h-full right-0 top-0 object-cover opacity-70"
+          class="absolute inset-0 z-10 w-full h-full right-0 top-0 object-cover bg-opacity-25 opacity-90"
         />
         <figcaption
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 w-96 p-4 ml-16 font-light text-center tracking-widest leading-snug bg-opacity-25"
+          class="absolute m-12 px-24 py-12 rounded-3xl bg-slate-800 left-0 top-1/2 transform -translate-y-1/2 z-20 w-96 ml-16 font-light text-center tracking-widest leading-snug text-white "
         >
           <!-- <pre class="text-white bg-orange-400">  {{ navbarBlue }}</pre> -->
           <h2 class="text-2xl font-bold mb-6">{{ item.title }}</h2>
@@ -104,30 +104,30 @@ const itemList = [
   {
     link: "src/assets/Ads-Shawarma-removebg-preview.png",
     title: "Shawarma",
-    description: "An adorable cat with fluffy fur and captivating eyes.",
+    description: "A classic dish made with tender and juicy chicken.",
   },
   {
     link: "src/assets/Ads-Fried-Chicken-removebg-ratio.png",
-    title: "Beautiful Beach",
+    title: "Fried Chicken",
     description:
-      "A stunning view of a beach with golden sands and clear blue water.",
+      "A mouth-watering dish made with tender and juicy chicken.",
   },
   {
     link: "src/assets/Ads-Grilled-Chicken-removebg.png",
-    title: "Playful Dog",
-    description: "A playful dog enjoying a sunny day outdoors.",
+    title: "Grilled Chicken",
+    description: "A classic dish made with tender and juicy chicken.",
   },
   {
     link: "src/assets/Ads-Mofo-removebg-preview.png",
-    title: "Colorful Lego",
+    title: "Mofo",
     description:
-      "A creative display of colorful Lego bricks and constructions.",
+      "Mofo is a classic dish made with tender and juicy chicken.",
   },
   {
     link: "src/assets/Ads-Roasted-removebg-preview.png",
-    title: "Textures & Patterns",
+    title: "Roasted Chicken",
     description:
-      "An artistic composition showcasing various textures and patterns.",
+      "Roasted is a classic dish made with tender and juicy chicken.",
   },
 ];
 const back = () => {

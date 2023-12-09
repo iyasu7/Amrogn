@@ -1,14 +1,43 @@
 <script setup>
 import MenuItem from "../menu/MenuItem.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { storeToRefs } from "pinia";
+import { useMainStore } from "../../store/index"
 
-defineProps({
-  items: Array,
+const store = useMainStore();
+
+const tagInput = ref('');
+const menuItems = storeToRefs(store).menuItems;
+
+const filteredTags = ref([...menuItems.value]);
+console.log('filteredTags', filteredTags);
+
+onMounted(() => {
+  filteredTags.value = [...menuItems.value];
+  console.log(filteredTags.value);
 });
-const emit = defineEmits(["click"]);
-const filter = ref("*");
-emit("click", filter);
+
+const filter = (tag) => {
+  tagInput.value = tag;
+  const copyOfMenu = menuItems.value.map(item => {
+    return {
+      ...item,
+    }
+  });
+  const selectedTag = tagInput.value.toLowerCase();
+  filteredTags.value = copyOfMenu.filter(item =>
+    item.tags.map(tag => tag.toLowerCase()).includes(selectedTag)
+  );
+  console.log('filter', filteredTags.value);
+}
+
+function clearFilters() {
+  tagInput.value = '';
+  filteredTags.value = [...menuItems.value];
+}
 </script>
+
+
 <template>
   <section id="menu" class="food_section layout_padding">
     <div class="container">
@@ -17,11 +46,11 @@ emit("click", filter);
       </div>
 
       <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li @click="filter = 'burger'">Burger</li>
-        <li @click="filter = 'pizza'">Pizza</li>
-        <li @click="filter = 'pasta'">Pasta</li>
-        <li @click="filter = 'fries'">Fries</li>
+        <li  @click="clearFilters" :class="{ 'active': tagInput === '' }">All</li>
+        <li @click="filter('chicken')" :class="{ 'active': tagInput === 'chicken' }">Chicken</li>
+        <li @click="filter('shewarma')" :="{ 'active': tagInput === 'shewarma' }">Shewarma</li>
+        <li @click="filter('rice')" :class="{ 'active': tagInput === 'rice' }">Rice</li>
+        <li @click="filter('meat')" :class="{ 'active': tagInput === 'meat' }">Meat</li>
       </ul>
 
       <div class="filters-content mx-12">
@@ -31,7 +60,7 @@ emit("click", filter);
           >
             <MenuItem
               class="m-2"
-              v-for="(item, index) in items"
+              v-for="(item, index) in filteredTags"
               :key="index"
               :item="item"
             />

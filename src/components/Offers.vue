@@ -8,18 +8,15 @@
               <div class="img-box">
                 <img style="background-color: azure;" src="../assets/Ads-Fried-Chicken-removebg-Square.png" alt="">
               </div>
-              <div class="detail-box">
+              <div class="detail-box ml-12">
                 <h5 class="text-xl font-bold">
-                  Tasty Thursdays
+                  Tasty Friday
                 </h5>
                 <h6>
                   <span class="text-red-500">20%</span> Off
                 </h6>
-                <a href="" class="btn btn-primary">
-                  Order Now <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejun="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
+                <a href="" class="btn btn-primary flex justify-between">
+                  Join Us
                 </a>
               </div>
             </div>
@@ -29,19 +26,15 @@
               <div class="img-box">
                 <img style="background-color: azure;" src="../assets/Ads-Fried-Chicken-removebg-Square.png" alt="">
               </div>
-              <div class="detail-box">
+              <div class="detail-box ml-12">
                 <h5 class="text-xl font-bold">
-                  Pizza Days
+                  Chicken Days
                 </h5>
                 <h6>
                   <span class="text-red-500">15%</span> Off
                 </h6>
                 <a href="" class="btn btn-primary">
-                  Order Now
-                  <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
+                  Join Us
                 </a>
               </div>
             </div>
