@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+    class="relative gap-4 mx-4 flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
   >
     <div
       class="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border"
@@ -19,10 +19,10 @@
         UI/UX Review Check
       </h4>
       <p
-        class="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"
+        class="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700 text-ellipsis overflow-hidden line-clamp-2 sm:line-clamp-2 md:line-clamp-4 lg:line-clamp-4"
       >
         Because it&apos;s about motivating the doers. Because I&apos;m here to
-        follow my dreams and inspire others.
+        follow my dreams and inspire others.Dolor aute elit quis nostrud nisi exercitation mollit ea. Ad ea aliqua officia aliqua deserunt aute excepteur sint irure adipisicing incididunt magna eu et. Pariatur non consequat duis nostrud laborum incididunt. Et ex nulla magna cupidatat laborum consectetur commodo do. Ea laborum exercitation Lorem ullamco culpa do.
       </p>
     </div>
     <div class="flex items-center justify-between p-6">

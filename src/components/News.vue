@@ -35,13 +35,13 @@ const closeNews = () => {
       <button
         type="button"
         @click="closeNews"
-        class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 items-center h-8 w-8 dark:text-gray-900 dark:hover:text-white dark:hover:bg-gray-700"
+        class="ms-auto -mx-1.5 -my-1.5 ml-4 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 items-center h-8 w-8 dark:text-gray-900 dark:hover:text-white dark:hover:bg-gray-700"
         data-dismiss-target="#toast-default"
         aria-label="Close"
       >
         <span class="sr-only">Close</span>
         <svg
-          class="w-3 h-3"
+          class="w-4 h-4 flex justify-center"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
