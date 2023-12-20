@@ -1,6 +1,5 @@
 <template>
-  <footer
-  id="contact" class="footer_section bg-gray-800 text-white">
+  <footer id="contact" class="footer_section bg-gray-800 text-white">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div class="footer-col">
@@ -9,7 +8,7 @@
             <div class="contact_link_box mt-4 mx-24 sm:mx-6">
               <a href="#location" class="flex items-center justify-center">
                 <svg
-                style="text-align: center;"
+                  style="text-align: center"
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
                   height="36"
@@ -20,7 +19,7 @@
                     d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"
                   />
                 </svg>
-                <p> Locations </p>
+                <p>Locations</p>
               </a>
               <a href="#" class="flex items-center justify-center">
                 <svg
@@ -37,7 +36,7 @@
                     d="M19.506 7.96A16.027 16.027 0 0 1 7.96 19.506C5.819 20.051 4 18.21 4 16v-1c0-.552.449-.995.998-1.05a9.94 9.94 0 0 0 2.656-.639l1.52 1.52a12.049 12.049 0 0 0 5.657-5.657l-1.52-1.52a9.94 9.94 0 0 0 .64-2.656C14.005 4.448 14.448 4 15 4h1c2.21 0 4.051 1.819 3.506 3.96Z"
                   />
                 </svg>
-                <p> Call 09 03 464646 </p>
+                <p>Call 09 03 464646</p>
               </a>
               <a href="#" class="flex items-center justify-center">
                 <svg
@@ -51,7 +50,7 @@
                     d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6m-2 0l-8 5l-8-5h16m0 12H4V8l8 5l8-5v10Z"
                   />
                 </svg>
-                <p class="ml-2"> info@amrognchicken.com </p>
+                <p class="ml-2">info@amrognchicken.com</p>
               </a>
             </div>
           </div>
@@ -90,7 +89,9 @@
                   />
                 </svg>
               </a>
-              <a href="https://www.instagram.com/explore/locations/106049010870514/amrogn-chicken/">
+              <a
+                href="https://www.instagram.com/explore/locations/106049010870514/amrogn-chicken/"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="256"
@@ -174,8 +175,10 @@
             </div>
           </div>
         </div>
-        <div class="footer-col ml-18"
-        style="text-align: center; margin-right: 0px;">
+        <div
+          class="footer-col ml-18"
+          style="text-align: center; margin-right: 0px"
+        >
           <h4 class="text-xl font-semibold">Opening Hours</h4>
           <p class="mt-4">Everyday</p>
           <p>10.00 AM - 10.00 PM</p>
@@ -183,17 +186,24 @@
       </div>
       <div class="footer-info mt-8">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By Iyasu
-          Yonas<br /><br />
-          &copy; <span id="displayYear"></span> Designed & Developed By <a href="https://www.linkedin.com/in/iyasuyonas" >@Josh</a>
+          &copy; <span id="displayYear"></span> Designed & Developed By
+          <button data-tooltip-target="tooltip-top" data-tooltip-placement="top" type="button" class="mb-2 md:mb-0 text-white hover:text-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-800">
+            
+          <a href="https://www.linkedin.com/in/iyasuyonas">
+              Iyasu Yonas
+            </a></button>
+
+<div id="tooltip-top" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+    Tooltip on top
+    <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
         </p>
       </div>
     </div>
   </footer>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 /* Add your styles for the component here */

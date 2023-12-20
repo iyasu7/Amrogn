@@ -2,7 +2,7 @@
 import MenuItem from "../menu/MenuItem.vue";
 import { ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
-import { useMainStore } from "../../store/index"
+import { useMainStore } from "../../store"
 
 const store = useMainStore();
 
@@ -53,10 +53,10 @@ function clearFilters() {
         <li @click="filter('meat')" :class="{ 'active': tagInput === 'meat' }">Meat</li>
       </ul>
 
-      <div class="filters-content mx-12">
+      <div class="md:ml-24 sm:mr-24 ml-9 mr-3 md:mr-0">
         <div class="row grid">
           <div
-            class="mx-2 sm:mx-2 lg:ml-12 lg:mr-0 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 grid-flow-row"
+            class="mx-2 sm:mx-2 lg:ml-12 lg:mr-0 gap-8 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 grid-flow-row"
           >
             <MenuItem
               class="m-2"
