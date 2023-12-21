@@ -16,7 +16,7 @@
       <span>{{ itemList.length }}</span> -->
     </div>
 
-    <template v-for="(item, index) in itemList" :key="index">
+    <template>
       <figure
         style="height: 100vh"
         class="h-96"
@@ -24,21 +24,21 @@
         transition="opacity"
       >
         <img
-          :src="item.link"
-          :alt="item.title"
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxyZXN0dXJhbnR8ZW58MHx8MHx8fDA%3D"
+          alt="Amrogn"
           class="absolute inset-0 z-10 w-full h-full right-0 top-0 object-cover bg-opacity-25 opacity-90"
         />
         <figcaption
           class="absolute m-12 px-24 py-12 rounded-3xl left-0 top-1/2 transform -translate-y-1/2 z-20 w-96 ml-16 font-light text-center tracking-widest leading-snug text-white "
         >
           <!-- <pre class="text-white bg-orange-400">  {{ navbarBlue }}</pre> -->
-          <h2 class="text-6xl font-bold mb-6">{{ item.title }}</h2>
-          <p class="text-xl">{{ item.description }}</p>
+          <h2 class="text-6xl font-bold mb-6">Amrogn</h2>
+          <p class="text-xl">We speak Chicken</p>
         </figcaption>
       </figure>
     </template>
     <div class="block w-full">
-      <button
+      <!-- <button
         @click="back"
         class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 hover:bg-gray-700"
       >
@@ -76,7 +76,7 @@
             d="M9 5l7 7-7 7"
           ></path>
         </svg>
-      </button>
+      </button> -->
     </div>
   </article>
 </template>

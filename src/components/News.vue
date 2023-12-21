@@ -8,7 +8,7 @@ const closeNews = () => {
 
 <template>
   <div
-    class="absolute z-10 md:top-16 top-16 left-1/4 w-1/2 rounded-xl flex justify-center text-gray-500 bg-gray-100 shadow dark:text-gray-400 dark:bg-gray-100"
+    class="absolute z-10 md:top-16 top-16 sm:left-1/4 sm:w-1/2 rounded-xl flex justify-center text-gray-500 bg-gray-100 shadow dark:text-gray-400 dark:bg-gray-100"
   >
     <div
       class="flex items-center p-4 dark:text-gray-900"

@@ -40,11 +40,11 @@
       >
         <Carousel v-bind="settings" :autoplay="7000" :wrap-around="true" :breakpoints="breakpoints">
           <Slide
-            v-for="slide in 10"
+            v-for="service in services"
             :key="slide"
             class="mr-4 sm:mr-16 md:mr-24 lg:mr-32"
           >
-            <Service class="gap-x-12 mx-8" />
+            <Service :service="service" class="gap-x-12 mx-8" />
           </Slide>
 
           <template #addons class="bg-red">
@@ -71,6 +71,88 @@ export default defineComponent({
   },
   data: () => ({
     // carousel settings
+    services : [
+  {
+    title: "Dine-In Service",
+    description: "Customers can enjoy meals in a comfortable and pleasant dining environment. Table service where waitstaff takes orders and serves food.",
+    img: "https://source.unsplash.com/800x600/?restaurant-dine-in"
+  },
+  {
+    title: "Takeout or Carry-Out",
+    description: "Customers order food to be picked up and enjoyed elsewhere. This can include phone orders, online orders, or walk-in orders.",
+    img: "https://source.unsplash.com/800x600/?restaurant-takeout"
+  },
+  {
+    title: "Delivery Service",
+    description: "Restaurants may offer delivery services to bring food directly to customers' homes or offices. This can be facilitated through in-house delivery staff or third-party delivery services.",
+    img: "https://source.unsplash.com/800x600/?restaurant-delivery"
+  },
+  {
+    title: "Catering",
+    description: "Providing food and services for events such as weddings, parties, conferences, and corporate functions.",
+    img: "https://source.unsplash.com/800x600/?restaurant-catering"
+  },
+  {
+    title: "Online Ordering",
+    description: "Facilitating orders through a restaurant's website or mobile app. Integration with third-party delivery platforms.",
+    img: "https://source.unsplash.com/800x600/?restaurant-online-ordering"
+  },
+  {
+    title: "Reservations",
+    description: "Allowing customers to reserve tables in advance, especially for busy times. Some restaurants use reservation management systems for this.",
+    img: "https://source.unsplash.com/800x600/?restaurant-reservations"
+  },
+  {
+    title: "Event Hosting",
+    description: "Hosting special events, theme nights, or promotions to attract customers. Live music, trivia nights, or themed parties are examples.",
+    img: "https://source.unsplash.com/800x600/?restaurant-event-hosting"
+  },
+  {
+    title: "Drive-Thru",
+    description: "Offering a convenient option for customers to order and pick up without leaving their vehicles.",
+    img: "https://source.unsplash.com/800x600/?restaurant-drive-thru"
+  },
+  {
+    title: "Curbside Pickup",
+    description: "Customers order online or by phone and pick up their food without entering the restaurant.",
+    img: "https://source.unsplash.com/800x600/?restaurant-curbside-pickup"
+  },
+  {
+    title: "Loyalty Programs",
+    description: "Offering loyalty cards or digital programs to reward repeat customers with discounts, free items, or other perks.",
+    img: "https://source.unsplash.com/800x600/?restaurant-loyalty-programs"
+  },
+  {
+    title: "Educational Events",
+    description: "Cooking classes, wine tastings, or workshops related to the restaurant's cuisine.",
+    img: "https://source.unsplash.com/800x600/?restaurant-educational-events"
+  },
+  {
+    title: "Special Menus",
+    description: "Offering special menus for holidays, seasons, or specific dietary preferences (e.g., vegetarian, gluten-free).",
+    img: "https://source.unsplash.com/800x600/?restaurant-special-menus"
+  },
+  {
+    title: "Gift Cards",
+    description: "Selling gift cards that customers can purchase and give to others or use at a later date.",
+    img: "https://source.unsplash.com/800x600/?restaurant-gift-cards"
+  },
+  {
+    title: "Mobile Payment",
+    description: "Accepting mobile payment options for added convenience Accepting mobile payment options for added convenience.",
+    img: "https://source.unsplash.com/800x600/?restaurant-mobile-payment"
+  },
+  {
+    title: "Feedback and Reviews",
+    description: "Encouraging customer feedback and online reviews to improve services and build a positive online reputation.",
+    img: "https://source.unsplash.com/800x600/?restaurant-feedback-reviews"
+  },
+  {
+    title: "Community Engagement",
+    description: "Participating in or sponsoring community events to build relationships and support local initiatives.",
+    img: "https://source.unsplash.com/800x600/?restaurant-community-engagement"
+  }
+],
 
     openServiceModal: ref(false),
     settings: {

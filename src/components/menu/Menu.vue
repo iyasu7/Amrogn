@@ -39,9 +39,9 @@ function clearFilters() {
 
 
 <template>
-  <section id="menu" class="food_section layout_padding">
+  <section id="menu" class="food_section layout_padding dark:text-white">
     <div class="container">
-      <div class="heading_container heading_center">
+      <div class="heading_container heading_center dark:text-white">
         <h2>Our Menu</h2>
       </div>
 
@@ -56,7 +56,7 @@ function clearFilters() {
       <div class="md:ml-24 sm:mr-24 ml-9 mr-3 md:mr-0">
         <div class="row grid">
           <div
-            class="mx-2 sm:mx-2 lg:ml-12 lg:mr-0 gap-8 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 grid-flow-row"
+            class="mx-2 sm:mx-2 lg:ml-12  lg:mr-0 gap-8 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 grid-flow-row"
           >
             <MenuItem
               class="m-2"

@@ -1,7 +1,7 @@
 <template>
   <div my-12 mt-36>
     <h2
-      class="text-3xl flex justify-center font-bold tracking-tight text-gray-900 sm:text-4xl"
+      class="text-3xl flex justify-center font-bold tracking-tight text-yellow-500 sm:text-4xl"
     >
       Don't just take our word for it...
     </h2>
@@ -12,7 +12,7 @@
       :transition="500"
     >
       <Slide
-        class="p-24 "
+        class="p-24"
         v-for="testimonial in testimonials"
         :key="testimonial.name"
       >
@@ -23,26 +23,34 @@
               class="flex h-full p-16 my-4 rounded-lg flex-col justify-center shadow-sm sm:p-8 lg:p-12"
             >
               <div>
-                <vue3-star-ratings class="text-3xl flex justify-center" numberOfStars="5" disableClick="true" v-model="testimonial.rating" />
+                <vue3-star-ratings
+                  class="text-3xl flex justify-center"
+                  numberOfStars="5"
+                  disableClick="true"
+                  v-model="testimonial.rating"
+                />
                 <div class="mt-4">
-                  <p class="text-lg font-bold text-rose-600 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl line-clamp-1 sm:line-clamp-2">
+                  <p
+                    class="text-lg font-bold text-rose-600 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl line-clamp-1 sm:line-clamp-2"
+                  >
                     {{ testimonial.title }}
                   </p>
 
-                  <p class="mt-4 leading-relaxed text-gray-700 text-ellipsis overflow-hidden line-clamp-2 sm:line-clamp-2 md:line-clamp-4 lg:line-clamp-4">
+                  <p
+                    class="mt-4 leading-relaxed dark:text-white text-gray-500 text-ellipsis overflow-hidden line-clamp-2 sm:line-clamp-2 md:line-clamp-4 lg:line-clamp-4"
+                  >
                     {{ testimonial.comment }}
                   </p>
                 </div>
               </div>
 
-              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+              <footer class="mt-4 text-sm font-medium dark:text-white text-gray-500  sm:mt-6">
                 &mdash; {{ testimonial.name }}
               </footer>
             </blockquote>
           </div>
         </div>
       </Slide>
-      <pre>{{ breakpoints }}</pre>
       ...
     </Carousel>
   </div>
@@ -67,109 +75,88 @@ export default defineComponent({
 
     const testimonials = [
       {
-        title: "Delicious Chicken Feast!",
+        title: "Truly the best shawarma place in town",
         comment:
-          "I can never get enough of the mouth-watering chicken dishes at this restaurant. The flavors are incredible, and the variety of options keeps me coming back for more!",
-        name: "John Smith",
+          "hey have branches at Piassa, Merkato, Mekanisa and CMC. The consistency in their taste is incredible. The price is also very fair. You can pay in any form u want, cash or mobile payment. Even if there might be a lot of customers your order doesn't take more than 10mis. Highly recommend it.",
+        name: "Samuel Haddis",
+        rating: 5,
+      },
+      {
+        title: "the food was yummy",
+        comment:
+          "It's my second time visiting this place and both times the food was yummy 😋. The place is always BUSY ,they don't have much space. You can\'t spend time chatting with a friend. You eat- and you go out! Total recommended ✔",
+        name: "Afom K.F.S",
+        rating: 5,
+      },
+      {
+        title: "One of the best chicken dishes in Addis",
+        comment:
+          "Kudos to the chef's preparing the tasty Food 😋.I am giving 4 because of the service. The waiters are too busy with the orders and they couldn't even listen for the customer",
+        name: "Ermias Alemayehu",
         rating: 4,
       },
       {
-        title: "Best Rice Bowls in Town!",
+        title: "Definitely the place in Addis for Chicken",
         comment:
-          "The rice bowls here are a true delight. The perfect blend of flavors and textures makes every bite a satisfying experience. I highly recommend trying them!",
-        name: "Emily Davis",
-        rating: 5,
-      },
-      {
-        title: "Unforgettable Mofo Shawarma",
-        comment:
-          "Mofo shawarma here is a game-changer! The combination of juicy chicken, fresh veggies, and the special sauce is simply irresistible. My taste buds thank me every time!",
-        name: "Michael Johnson",
-        rating: 3.4,
-      },
-      {
-        title: "Hearty Chicken Platter",
-        comment:
-          "The chicken platter is a feast for the senses. The portions are generous, and the seasoning is spot-on. This restaurant never disappoints when it comes to serving up delicious chicken!",
-        name: "Sarah Thompson",
+          "But don't expect prompt or speedy service... patience is needed... to get the .menu, to get the food and to pay for the food. But the food is worth it!!! It is recommended dishes like Fries, French Fries, Chicken Shawarma",
+        name: "Dave DaCosta",
         rating: 4.5,
       },
       {
-        title: "Rice Perfection!",
+        title: "Amrogn got z best chicken and shawarma in Addis",
         comment:
-          "I am a rice enthusiast, and this restaurant has truly mastered the art of preparing the perfect rice dishes. Every grain is flavorful and cooked to perfection. I'm a devoted fan!",
-        name: "Daniel White",
+          "The only problem is it's very crowded, even in fasting seasons. Its hard to get the waiters again after you order sometng( but z waiters were very nice despite them being busy) I loved it, I'm definitely going back!",
+        name: "Binyam Solomon",
         rating: 5,
       },
       {
-        title: "Mofo Shawarma Magic",
+        title: "Love it",
         comment:
-          "Mofo shawarma is a taste sensation like no other. The savory goodness of the chicken combined with the unique blend of spices is pure magic. It keeps me coming back for more!",
-        name: "Jessica Turner",
+          "Best Chicken, especially shawarma, in the country. Love it. I recommend you to try the Grilled Chicken, Fries, Roasted Chicken with Fried Rice, Chicken Shawarma",
+        name: "Leul T Agonafer",
         rating: 4.8,
       },
       {
-        title: "Chicken Bliss!",
+        title: "My go to chicken shawarma spot",
         comment:
-          "The chicken dishes at this restaurant are pure bliss. From grilled to roasted, every chicken dish is a flavor explosion. If you love chicken, this is the place to be!",
-        name: "Matthew Harris",
-        rating: 4.3,
-      },
-      {
-        title: "Savory Rice Bowls",
-        comment:
-          "The rice bowls are a delight to the senses. The savory flavors and variety of toppings create a culinary experience that I can never get enough of. Highly recommended!",
-        name: "Olivia Carter",
-        rating: 4.6,
-      },
-      {
-        title: "Mofo Shawarma Delight",
-        comment:
-          "Mofo shawarma is a delight for the taste buds. The perfect combination of ingredients and the secret sauce make it a must-try dish at this fantastic restaurant!",
-        name: "Ethan Robinson",
+          "Very delicious food and fast service. You can also call ahead and order so you can pick it up when you get there as parking might be an issue.",
+        name: "Bemnet Adam",
         rating: 5,
       },
       {
-        title: "Chicken Feast Extravaganza",
+        title: "From outside, I can smell a delicious aroma",
         comment:
-          "I recently had the chicken feast at this restaurant, and it was an absolute extravaganza of flavors. The variety of chicken dishes on the menu is impressive, and each one is a winner!",
+          "simply 1 of the best spots in addis if your craving chicken",
+        name: "Mohammed Ahmed",
+        rating: 5,
+      },
+      {
+        title: "The food here is awesome",
+        comment:
+          "especially the shawarma and chicken. The service was decent. It is just that the waiters are a bit overwhelmed, but overall, one of the best restaurants in Addis.",
+        name: "Hassan Umar",
+        rating: 5,
+      },
+      {
+        title: "One of the best shawarma places in town",
+        comment:
+          "Those that do not like it when shawarma is dry will appreciate this place.",
         name: "Sophia Miller",
-        rating: 4.8,
+        rating: 4,
       },
       {
-        title: "Rice Bowl Paradise",
+        title: "The kids loves the chicken fajitas 😋",
         comment:
-          "This restaurant is a rice bowl paradise. The options are diverse, and the flavors are out of this world. I've never had a dull moment with their delectable rice bowls!",
-        name: "Christopher Lewis",
+          "Excellent food 😋 but the waiters were out numbered to provide sufficient service to customers, so please add more waiters.",
+        name: "Eyob and Tom",
         rating: 4.9,
       },
       {
-        title: "Mofo Shawarma Wonder",
+        title: "delicious chicken",
         comment:
-          "The mofo shawarma is a wonder on a plate! The tender chicken, the fresh veggies, and the special sauce create a flavor explosion that leaves me craving more every time.",
+          "I am not into chicken however this restaurant has a finger liking chicken dishes.",
         name: "Isabella Bennett",
         rating: 4.5,
-      },
-      {
-        title: "Chicken Mastery",
-        comment:
-          "The chefs at this restaurant are true masters when it comes to preparing chicken dishes. The flavors are rich, and the attention to detail is evident in every bite. Highly impressed!",
-        name: "Aiden Reed",
-        rating: 4.7,
-      },
-      {
-        title: "Satisfaction Guaranteed",
-        comment:
-          "Satisfaction is guaranteed at this restaurant. Whether it's the chicken, rice bowls, or mofo shawarma, the quality and taste consistently exceed expectations. A loyal customer for life!",
-        name: "Ava Thompson",
-        rating: 4.6,
-      },
-      {
-        title: "Rice Elegance",
-        comment:
-          "Elegance in every bite! The rice dishes at this restaurant are a true culinary masterpiece. The presentation, the aroma, and, most importantly, the taste, are unmatched!",
-        name: "Nathan Bennett",
-        rating: 5,
       },
     ];
 
@@ -201,7 +188,7 @@ export default defineComponent({
 
     const updateBreakpoints = () => {
       if (breakpoints.is === "all") {
-        itemsToShow.value = 1.25;
+        itemsToShow.value = 1;
       } else if (breakpoints.is === "sm") {
         itemsToShow.value = 1.45;
       } else if (breakpoints.is === "md") {

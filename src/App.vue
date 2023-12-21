@@ -5,6 +5,7 @@ import { storeToRefs } from "pinia";
 
 import News from './components/News.vue'; 
 import Jumbotron from './components/Jumbotron.vue'; 
+import JumbotronOld from './components/JumbotronOld.vue'; 
 import Carousel from './components/Carousel.vue';
 import Menu from './components/menu/Menu.vue';
 import Navbar from './components/Navbar.vue';
@@ -23,8 +24,8 @@ const open = ref(openNews);
   <div>
     <News v-if="open" />
     <!-- <Navbar /> -->
-    <!-- <JumbotronOld /> -->
-    <Jumbotron />
+    <JumbotronOld />
+    <!-- <Jumbotron /> -->
     <Carousel />
     <WeAre />
     <!-- <Offers /> -->
