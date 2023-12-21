@@ -16,7 +16,7 @@
       <span>{{ itemList.length }}</span> -->
     </div>
 
-    <template v-for="(item, index) in itemList" :key="index">
+    <template>
       <figure
         style="height: 100vh"
         class="h-96"
@@ -24,21 +24,21 @@
         transition="opacity"
       >
         <img
-          :src="item.link"
-          :alt="item.title"
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxyZXN0dXJhbnR8ZW58MHx8MHx8fDA%3D"
+          alt="Amrogn"
           class="absolute inset-0 z-10 w-full h-full right-0 top-0 object-cover bg-opacity-25 opacity-90"
         />
         <figcaption
-          class="absolute m-12 px-24 py-12 rounded-3xl bg-slate-800 left-0 top-1/2 transform -translate-y-1/2 z-20 w-96 ml-16 font-light text-center tracking-widest leading-snug text-white "
+          class="absolute m-12 px-24 py-12 rounded-3xl left-0 top-1/2 transform -translate-y-1/2 z-20 w-96 ml-16 font-light text-center tracking-widest leading-snug text-white "
         >
           <!-- <pre class="text-white bg-orange-400">  {{ navbarBlue }}</pre> -->
-          <h2 class="text-2xl font-bold mb-6">{{ item.title }}</h2>
-          <p class="text-sm">{{ item.description }}</p>
+          <h2 class="text-6xl font-bold mb-6">Amrogn</h2>
+          <p class="text-xl">We speak Chicken</p>
         </figcaption>
       </figure>
     </template>
     <div class="block w-full">
-      <button
+      <!-- <button
         @click="back"
         class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 hover:bg-gray-700"
       >
@@ -76,7 +76,7 @@
             d="M9 5l7 7-7 7"
           ></path>
         </svg>
-      </button>
+      </button> -->
     </div>
   </article>
 </template>
@@ -102,29 +102,30 @@ const images = [
 ];
 const itemList = [
   {
-    link: "src/assets/Ads-Shawarma-removebg-preview.png",
-    title: "Shawarma",
-    description: "A classic dish made with tender and juicy chicken.",
-  },
-  {
-    link: "src/assets/Ads-Fried-Chicken-removebg-ratio.png",
+    link: "src/assets/base-bg-overlay.jpg",
     title: "Fried Chicken",
     description:
       "A mouth-watering dish made with tender and juicy chicken.",
   },
   {
-    link: "src/assets/Ads-Grilled-Chicken-removebg.png",
+    link: "src/assets/base-bg-overlay (1).jpg",
+    title: "Shawarma",
+    description: "A classic dish made with tender and juicy chicken.",
+  },
+  
+  {
+    link: "src/assets/base-bg-overlay (2).jpg",
     title: "Grilled Chicken",
     description: "A classic dish made with tender and juicy chicken.",
   },
   {
-    link: "src/assets/Ads-Mofo-removebg-preview.png",
+    link: "src/assets/base-bg-overlay (3).jpg",
     title: "Mofo",
     description:
       "Mofo is a classic dish made with tender and juicy chicken.",
   },
   {
-    link: "src/assets/Ads-Roasted-removebg-preview.png",
+    link: "src/assets/base-bg-overlay (4).jpg",
     title: "Roasted Chicken",
     description:
       "Roasted is a classic dish made with tender and juicy chicken.",

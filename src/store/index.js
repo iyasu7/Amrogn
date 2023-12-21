@@ -52,9 +52,26 @@ export const useMainStore = defineStore('user', {
         tags: ["Meat", "Fries"],
       },
     ],
+    openNews : true,
+    openServiceModal : false,
   }),
   actions: {
-
+    openNewsToggle () {
+      this.openNews = true
+    },
+    closeNews () {
+      this.openNews = false
+    },
+    toggleService () {
+      this.openServiceModal = !this.openServiceModal
+      console.log(this.openServiceModal)
+    },
+    openService () {
+      this.openServiceModal = true
+    },
+    closeService () {
+      this.openServiceModal = false
+    }
   },
   getters: {
     isAuthenticated: (state) => !!state.accessToken,
