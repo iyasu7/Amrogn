@@ -19,67 +19,77 @@
 //       });
 //   },
 // };
+
 import { onMounted, ref } from "vue";
+
+const curBranch = ref({});
 onMounted(() => {
-  curAddress.value = locations[0].address;
+  console.log(locations[0]);
+  curBranch.value = locations[0];
+  console.log(curBranch.value);
 });
-const curAddress = ref("");
 const locations = [
   {
     id: 1,
     name: "Mekannisa",
     address:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.847311538421!2d38.73480407424829!3d8.986194391073461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859895a5738b%3A0x13436b018d17807d!2sAmrogn%20Chicken%20%7C%20Mekanisa!5e0!3m2!1sen!2set!4v1701947366853!5m2!1sen!2set",
+    phones: ["(+251) 910 22 3333", "(+251) 916 84 8574"],
   },
   {
     id: 2,
     name: "Piassa",
     address:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3841890234835!2d38.74916137424888!3d9.028673691032637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85e231bf6445%3A0x9887bb7e7fb4c330!2sAmrogn%20Chicken!5e0!3m2!1sen!2set!4v1702110156788!5m2!1sen!2set",
+    phones: ["(+251) 910 56 6788", "(+251) 916 86 2390"],
   },
   {
     id: 3,
     name: "Merkato",
     address:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3461540851886!2d38.73656857424899!3d9.032153591029296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85582ea19511%3A0x42bfa14b77382442!2zQW1yb2duIENoaWNrZW4gfCBNZXJrYXRvIEJyYW5jaCB8IOGKoOGIneGIruGKnSDhibrhiq3hipUgfCDhiJjhiK3hiqvhibY!5e0!3m2!1sen!2set!4v1702110221885!5m2!1sen!2set",
+    phones: ["(+251) 910 88 8621", "(+251) 916 44 9724"],
   },
   {
     id: 2,
     name: "CMC",
     address:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.509039444196!2d38.84891717424872!3d9.017241491043626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9bfe0fcb5e7d%3A0x28469f0a408bc3bd!2sAmrogn%20Chicken%20(CMC)!5e0!3m2!1sen!2set!4v1702110060785!5m2!1sen!2set",
+    phones: ["(+251) 910 74 5092", "(+251) 916 17 2309"],
   },
   {
     id: 2,
     name: "Bole",
     address:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7881.280950455265!2d38.762228763934175!3d9.005190736087487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b039c25bc1%3A0x941677a8f60160fe!2sDembel%20City%20Center!5e0!3m2!1sen!2set!4v1702112497117!5m2!1sen!2set",
+    phones: ["(+251) 910 87 3579", "(+251) 916 27 9571"],
   },
 ];
-const goToLocation = (address) => {
-  curAddress.value = address;
+const goToLocation = (branch) => {
+  curBranch.value = branch;
 };
 </script>
 
 <template>
   <div
-  id="location" class="mx-2 sm:mx-4 md:mx-6 lg:mx-12 my-6 md:my-12 bg-gray-100">
+    class="mx-2 sm:mx-4 md:mx-6 lg:mx-12 my-6 md:my-12 dark:text-white dark:bg-gray-800 bg-gray-700" 
+  >
     <div class="flex justify-center items-center">
-      <h2 class="text-4xl text-gray-900 font-bold p-4">Our Locations</h2>
+      <h2 class="text-4xl text-gray-900 font-bold p-4 mt-6 dark:text-white">Our Locations</h2>
     </div>
-    <div class="md:flex mx-2 sm:mx-4 md:mx-6">
+    <div class="md:flex mx-2 sm:mx-4 md:mx-6 ">
       <ul
         class="p-6 flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0"
       >
         <li>
           <button
-            @click="goToLocation(locations[0].address)"
+            @click="goToLocation(locations[0])"
             class="inline-flex items-center px-4 py-3 rounded-lg w-full"
             :class="{
-              ' hover:text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white':
-                curAddress !== locations[0].address,
-              ' text-white  dark:bg-red-700':
-                curAddress === locations[0].address,
+              ' hover:text-gray-900  bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white dark:hover:text-white':
+                curBranch.address !== locations[0].address,
+              'glow-btn':
+                curBranch.address === locations[0].address,
             }"
             aria-current="page"
           >
@@ -99,12 +109,15 @@ const goToLocation = (address) => {
         </li>
         <li>
           <button
-            @click="goToLocation(locations[1].address)"
+            @click="goToLocation(locations[1])"
             class="inline-flex items-center px-4 py-3 rounded-lg w-full"
             :class="{
-            'inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white': curAddress !== locations[1].address,
-            'inline-flex items-center px-4 py-3 rounded-lg cursor-not-allowed text-white  dark:bg-red-700': curAddress === locations[1].address,
-          }"          >
+              ' hover:text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white dark:hover:text-white':
+                curBranch.address !== locations[1].address,
+              'glow-btn':
+                curBranch.address === locations[1].address,
+            }"
+          >
             <svg
               class="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -121,12 +134,15 @@ const goToLocation = (address) => {
         </li>
         <li>
           <button
-            @click="goToLocation(locations[2].address)"
+            @click="goToLocation(locations[2])"
             class="inline-flex items-center px-4 py-3 rounded-lg w-full"
             :class="{
-            ' hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white': curAddress !== locations[2].address,
-            ' text-white  dark:bg-red-700': curAddress === locations[2].address,
-          }">
+              ' hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white dark:hover:text-white':
+                curBranch.address !== locations[2].address,
+              ' glow-btn':
+                curBranch.address === locations[2].address,
+            }"
+          >
             <svg
               class="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -143,12 +159,15 @@ const goToLocation = (address) => {
         </li>
         <li>
           <button
-            @click="goToLocation(locations[3].address)"
+            @click="goToLocation(locations[3])"
             class="inline-flex items-center px-4 py-3 rounded-lg w-full"
             :class="{
-            'inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white': curAddress !== locations[3].address,
-            'inline-flex items-center px-4 py-3 rounded-lg cursor-not-allowed text-white  dark:bg-red-700': curAddress === locations[3].address,
-          }"          >
+              ' hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white dark:hover:text-white':
+                curBranch.address !== locations[3].address,
+              'glow-btn':
+                curBranch.address === locations[3].address,
+            }"
+          >
             <svg
               class="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -168,12 +187,15 @@ const goToLocation = (address) => {
         </li>
         <li>
           <button
-            @click="goToLocation(locations[4].address)"
+            @click="goToLocation(locations[4])"
             class="inline-flex items-center px-4 py-3 rounded-lg w-full"
             :class="{
-            'inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white': curAddress !== locations[4].address,
-            'inline-flex items-center px-4 py-3 rounded-lg cursor-not-allowed text-white  dark:bg-red-700': curAddress === locations[4].address,
-          }"          >
+              'hover:text-gray-900dark:hover:text-white bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400':
+                curBranch.address !== locations[4].address,
+              'glow-btn':
+                curBranch.address === locations[4].address,
+            }"
+          >
             <svg
               class="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -191,31 +213,38 @@ const goToLocation = (address) => {
             Bole
           </button>
         </li>
-        <!-- <li>
-          <a
-            class="inline-flex items-center px-4 py-3 text-gray-400 rounded-lg cursor-not-allowed text-white  dark:bg-red-700"
-          >
-            <svg
-              class="w-4 h-4 me-2 text-gray-400 dark:text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"
-              />
-            </svg>
-            Disabled
-            </a>
-        </li> -->
       </ul>
       <div
-        class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-full"
+        class="p-6 bg-gray-50 dark:bg-gray-800 text-medium text-gray-500 dark:text-gray-400 rounded-lg w-full"
       >
+        <div class="md:flex mx-2 sm:mx-4 md:mx-6 mb-6">
+          <h2 class="text-2xl font-bold text-slate-950 dark:text-white">
+            {{ curBranch.name }} Branch Phones
+          </h2>
+          <div v-for="phone in curBranch.phones">
+            <div class="flex mx-12">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 mr-2"
+              >
+                <path
+                  fill="#222831"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.506 7.96A16.027 16.027 0 0 1 7.96 19.506C5.819 20.051 4 18.21 4 16v-1c0-.552.449-.995.998-1.05a9.94 9.94 0 0 0 2.656-.639l1.52 1.52a12.049 12.049 0 0 0 5.657-5.657l-1.52-1.52a9.94 9.94 0 0 0 .64-2.656C14.005 4.448 14.448 4 15 4h1c2.21 0 4.051 1.819 3.506 3.96Z"
+                />
+              </svg>
+              <span class="text-center text-lg text-[#b84040] font-bold">{{ phone }}</span>
+            </div>
+          </div>
+        </div>
         <iframe
-          class="box-border h-96 p-6 bg-white border border-white rounded-lg shadow hover:bg-gray-100"
-          :src="curAddress"
+          class="box-border h-96 p-6 bg-gray-700 border border-white dark:border-gray-900 rounded-lg shadow hover:bg-gray-100"
+          :src="curBranch.address"
           width="100%"
           style="background-color: #222831"
           allowfullscreen=""
@@ -228,10 +257,29 @@ const goToLocation = (address) => {
 </template>
 
 <style scoped>
-/* Add styles to the map container */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(251, 255, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
+  }
+}
+
+.glow-btn {
+  background-color: #F6EB0F;
+  color: #0b4e09;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: glowing 1.5s infinite;
+}
+
 div {
   color: green;
-  background-color: aliceblue;
   font-family: "Courier New", Courier, monospace;
 }
 .map-container {
